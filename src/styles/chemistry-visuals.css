@@ -1,0 +1,46 @@
+@layer components {
+  .experiment-image-frame {
+    @apply relative overflow-hidden border border-archive-line/80 bg-black/20 p-2;
+  }
+
+  .experiment-image-frame::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    z-index: 1;
+    pointer-events: none;
+    border: 1px solid rgba(141, 157, 95, 0.08);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 18px 18px;
+    mix-blend-mode: screen;
+  }
+
+  .experiment-image {
+    @apply block h-full w-full object-cover;
+    filter: saturate(0.92) contrast(1.04) brightness(0.92);
+  }
+
+  .experiment-image-kmno4,
+  .experiment-image-tollens,
+  .experiment-image-trommer {
+    aspect-ratio: 16 / 9;
+  }
+
+  .experiment-image-polyhydricAlcohols {
+    aspect-ratio: 24 / 5;
+  }
+
+  .experiment-image-liquidNitrogen {
+    aspect-ratio: 2.65 / 1;
+  }
+
+  .radio-row {
+    @apply flex min-h-9 cursor-pointer items-center gap-3 text-sm text-archive-paper;
+  }
+
+  .radio-row input {
+    @apply h-5 w-5 accent-archive-success;
+  }
+}

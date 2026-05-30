@@ -1,0 +1,219 @@
+@layer components {
+  .archive-panel {
+    @apply relative overflow-hidden border border-archive-line/80 bg-archive-panel/85 shadow-archive;
+  }
+
+  .archive-panel::before,
+  .experiment-card::before,
+  .final-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid rgba(141, 157, 95, 0.08);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.6;
+  }
+
+  .experiment-card {
+    @apply relative h-full overflow-hidden border border-archive-line/90 bg-archive-panel/90 p-4 shadow-archive transition duration-300;
+  }
+
+  .experiment-card-solved {
+    @apply border-archive-success/60;
+    box-shadow: 0 0 28px rgba(163, 200, 121, 0.13), inset 0 0 38px rgba(0, 0, 0, 0.58);
+  }
+
+  .final-panel {
+    @apply relative overflow-hidden border border-archive-line/90 bg-archive-panel/90 p-5 shadow-archive;
+  }
+
+  .section-title {
+    @apply font-display text-sm uppercase tracking-[0.16em] text-archive-moss;
+  }
+
+  .nav-link {
+    @apply inline-flex min-h-10 items-center border-b border-transparent px-3 text-sm uppercase tracking-[0.14em] text-archive-paper transition hover:border-archive-moss hover:text-archive-success;
+  }
+
+  .nav-link-active {
+    @apply border-archive-moss text-archive-success;
+  }
+
+  .status-panel {
+    @apply min-w-[260px] border border-archive-line/80 bg-black/25 px-4 py-3;
+  }
+
+  .damage-label {
+    @apply shrink-0 whitespace-nowrap text-[0.62rem] uppercase tracking-[0.16em] text-archive-dim;
+  }
+
+  .archive-select {
+    @apply h-12 w-full appearance-none border border-archive-line bg-black/25 py-0 pl-4 pr-12 text-sm text-archive-paper transition hover:border-archive-moss disabled:cursor-not-allowed disabled:opacity-60;
+    background-image:
+      linear-gradient(45deg, transparent 50%, #b7a27f 50%),
+      linear-gradient(135deg, #b7a27f 50%, transparent 50%);
+    background-position:
+      calc(100% - 22px) 50%,
+      calc(100% - 16px) 50%;
+    background-repeat: no-repeat;
+    background-size: 6px 6px, 6px 6px;
+  }
+
+  .archive-select option {
+    background: #0b100e;
+    color: #d5c49d;
+  }
+
+  .archive-select option:checked {
+    background: #1a2419;
+    color: #a3c879;
+  }
+
+  .archive-input {
+    @apply h-12 w-full border border-archive-line bg-black/30 px-4 text-lg uppercase tracking-[0.14em] text-archive-paper transition hover:border-archive-moss;
+  }
+
+  .archive-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 border border-archive-line bg-black/20 px-5 text-sm uppercase tracking-[0.12em] text-archive-paper transition duration-200 hover:border-archive-moss hover:bg-archive-moss/10 hover:text-archive-success disabled:cursor-not-allowed disabled:border-archive-line/45 disabled:text-archive-dim/60 disabled:hover:bg-black/20;
+  }
+
+  .experiment-link {
+    @apply inline-block text-archive-moss underline decoration-archive-line underline-offset-4 transition hover:text-archive-success;
+  }
+
+  .digit-slot,
+  .code-input {
+    @apply flex h-14 items-center justify-center border border-archive-line bg-black/25 text-center font-display text-2xl text-archive-paper;
+  }
+
+  .digit-slot-unlocked {
+    @apply animate-unlock border-archive-success/70 text-archive-success;
+  }
+
+  .code-input {
+    @apply w-14 transition hover:border-archive-moss;
+  }
+
+  .feedback {
+    @apply border px-3 py-2 text-sm;
+  }
+
+  .feedback-correct {
+    @apply border-archive-success/50 bg-archive-success/10 text-archive-success;
+  }
+
+  .feedback-wrong {
+    @apply border-archive-error/60 bg-archive-error/10 text-archive-error;
+  }
+
+  .access-message {
+    @apply border px-4 py-3 text-sm leading-6;
+  }
+
+  .access-granted {
+    @apply border-archive-success/60 bg-archive-success/10 text-archive-success;
+  }
+
+  .access-denied {
+    @apply border-archive-error/60 bg-archive-error/10 text-archive-error;
+  }
+
+  .access-gate {
+    @apply relative w-full overflow-hidden border border-archive-line/90 bg-archive-panel/95 p-6 shadow-archive sm:p-8;
+  }
+
+  .access-gate::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .access-gate-mark {
+    @apply flex h-16 w-16 shrink-0 items-center justify-center border border-archive-line/80 bg-black/25 font-display text-xl text-archive-success;
+    box-shadow: inset 0 0 18px rgba(163, 200, 121, 0.08);
+  }
+
+  .destroyed-data-note {
+    @apply mt-3 border border-archive-warning/50 bg-archive-warning/10 px-3 py-2 text-xs uppercase tracking-[0.12em] text-archive-paper;
+  }
+
+  .paper-note {
+    @apply relative rotate-[-3deg] border border-[#594d32] bg-archive-paper px-5 pb-5 pt-10 font-display text-[#17140f] shadow-paper;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.16) 0 1px, transparent 2px),
+      radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.16) 0 1px, transparent 2px),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.28), rgba(78, 59, 35, 0.16));
+  }
+
+  .paper-note::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    pointer-events: none;
+    border: 1px dashed rgba(44, 35, 23, 0.3);
+  }
+
+  .paper-note h2,
+  .paper-note p {
+    @apply relative;
+    z-index: 2;
+  }
+
+  .paper-note p {
+    @apply mt-4 text-base leading-7;
+  }
+
+  .paper-note-compact {
+    @apply rotate-[1deg] px-6 pb-6 pt-10;
+  }
+
+  .paper-clip {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 12px;
+    height: 42px;
+    border: 1.5px solid rgba(30, 26, 20, 0.75);
+    border-radius: 12px;
+    transform: rotate(-160deg);
+    z-index: 0;
+  }
+
+  .sidebar-title {
+    @apply max-w-full font-display text-[1.35rem] font-bold uppercase leading-tight tracking-[0.04em] text-archive-moss sm:text-[1.45rem];
+    overflow-wrap: anywhere;
+  }
+
+  .sidebar-subtitle {
+    @apply mt-2 text-xs uppercase leading-5 tracking-[0.14em] text-archive-paper;
+  }
+
+  .radio-row {
+    @apply flex min-h-9 cursor-pointer items-center gap-3 text-sm text-archive-paper;
+  }
+
+  .radio-row input {
+    @apply h-5 w-5 accent-archive-success;
+  }
+
+  .structure-answer-grid {
+    @apply mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4;
+  }
+
+  .structure-answer-option {
+    @apply flex min-h-11 cursor-pointer items-center justify-center gap-2 border border-archive-line bg-black/20 px-3 text-center text-xs uppercase tracking-[0.08em] text-archive-paper transition hover:border-archive-moss hover:text-archive-success;
+  }
+
+  .structure-answer-option input {
+    @apply h-4 w-4 shrink-0 accent-archive-success;
+  }
+}

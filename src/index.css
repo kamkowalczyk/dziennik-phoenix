@@ -1,0 +1,8 @@
+@import "./styles/base.css";
+@import "./styles/archive-components.css";
+@import "./styles/chemistry-visuals.css";
+@import "./styles/archive-utilities.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

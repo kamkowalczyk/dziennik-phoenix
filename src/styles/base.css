@@ -1,0 +1,35 @@
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-family: "Courier New", Courier, monospace;
+    background: #060807;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    margin: 0;
+    background: #060807;
+  }
+
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #a3c879;
+    outline-offset: 3px;
+  }
+}
