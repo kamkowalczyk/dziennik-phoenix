@@ -26,7 +26,7 @@ export function ExperimentCard({ experiment, state, onSelect, onConfirm }: Exper
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h2 className="font-display text-xl uppercase tracking-[0.08em] text-archive-moss">
+          <h2 className="font-display text-xl tracking-[0.08em] text-archive-moss">
             {experiment.number}. {experiment.title}
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-archive-paper">
