@@ -6,9 +6,9 @@ export const experiments: ExperimentConfig[] = [
   {
     id: "kmno4-ph",
     number: "01",
-    title: "KMnO4 / pH",
+    title: "KMnO₄ / pH",
     description: "Badanie właściwości manganianu(VII) potasu - wpływ pH środowiska.",
-    question: "W której probówce obserwujemy wpływ 1M NaOH na KMnO4?",
+    question: "W której probówce obserwujemy wpływ 1M NaOH na KMnO₄?",
     type: "select",
     options: [
       { value: "1", label: "Probówka 1" },
