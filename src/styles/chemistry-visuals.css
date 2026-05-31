@@ -22,18 +22,26 @@
     filter: saturate(0.92) contrast(1.04) brightness(0.92);
   }
 
-  .experiment-image-kmno4,
-  .experiment-image-tollens,
-  .experiment-image-trommer {
+  .experiment-image-kmno4 .experiment-image-media,
+  .experiment-image-tollens .experiment-image-media,
+  .experiment-image-trommer .experiment-image-media {
     aspect-ratio: 16 / 9;
   }
 
-  .experiment-image-polyhydricAlcohols {
+  .experiment-image-polyhydricAlcohols .experiment-image-media {
     aspect-ratio: 24 / 5;
   }
 
-  .experiment-image-liquidNitrogen {
+  .experiment-image-liquidNitrogen .experiment-image-media {
     aspect-ratio: 2.65 / 1;
+  }
+
+  .experiment-image-labels {
+    @apply relative z-10 grid grid-cols-4 gap-1 border-t border-archive-line/70 bg-black/35 px-1 py-2 text-center font-display text-[0.65rem] leading-tight tracking-[0.08em] text-archive-paper;
+  }
+
+  .experiment-image-labels span {
+    @apply min-w-0 border-r border-archive-line/40 px-1 last:border-r-0;
   }
 
   .radio-row {

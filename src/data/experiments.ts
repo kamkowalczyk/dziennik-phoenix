@@ -21,6 +21,7 @@ export const experiments: ExperimentConfig[] = [
     visual: {
       imageId: "kmno4",
       alt: "Probówki z manganianem(VII) potasu w różnych środowiskach reakcji.",
+      labels: ["KMnO₄", "Probówka 1", "Probówka 2", "Probówka 3"],
     },
   },
   {

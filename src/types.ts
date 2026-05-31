@@ -8,6 +8,7 @@ export type ExperimentImageId =
 export type ExperimentVisual = {
   alt: string;
   imageId: ExperimentImageId;
+  labels?: string[];
 };
 
 export type ExperimentOption = {

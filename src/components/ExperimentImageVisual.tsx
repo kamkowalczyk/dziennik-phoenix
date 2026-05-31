@@ -20,7 +20,16 @@ type ExperimentImageVisualProps = {
 export function ExperimentImageVisual({ visual }: ExperimentImageVisualProps) {
   return (
     <figure className={`experiment-image-frame experiment-image-${visual.imageId}`}>
-      <img className="experiment-image" src={experimentImages[visual.imageId]} alt={visual.alt} />
+      <div className="experiment-image-media">
+        <img className="experiment-image" src={experimentImages[visual.imageId]} alt={visual.alt} />
+      </div>
+      {visual.labels ? (
+        <figcaption className="experiment-image-labels">
+          {visual.labels.map((label) => (
+            <span key={label}>{label}</span>
+          ))}
+        </figcaption>
+      ) : null}
     </figure>
   );
 }
